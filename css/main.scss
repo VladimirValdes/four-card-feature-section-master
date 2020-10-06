@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import 'paleta.scss';
+@import 'mixins.scss';
+@import 'responsive.scss';
+
+body {
+    height: 100vh;
+    font-size: $content;
+    font-family: $font;
+    background-color: $ligth-gray;
+}
+
+.header {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        margin: $mg-bg 0 $mg-sm 0;
+        font-size: $title;
+        font-weight: $weight-sm;
+        color: $dark-blue;
+    }
+
+    h2 {
+        font-size: $title;
+        font-weight: $weight-bg;
+    }
+
+    p {
+        width: 300px;
+        color: $gray-blue;
+        margin-bottom: $mg-bg;
+        align-self: center;
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: minmax(275px, 325px);
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card__supervisor {
+    // margin-top: $mg-bg;
+    @include base_card($primary-cyan);
+}
+
+.card__teamBuilder {
+    @include base_card($primary-red);
+}
+
+.card__karma {
+    @include base_card($primary-orange);
+}
+
+.card__calculator {
+    @include base_card($primary-blue);
+}
+
+.title__card {
+    font-size: $title;
+    font-weight: $weight-bg;
+}
+
+.content_card {
+    color: $gray-blue;
+    line-height: 1.5rem;
+    margin-right: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.img {
+    align-self: flex-end;
+}
+
+@include tablet( 768px );
+
+@include desktop( 1024px );

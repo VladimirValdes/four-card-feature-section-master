@@ -1,0 +1,62 @@
+
+
+@mixin tablet( $breakpoint-tablet ) {
+    
+    @media screen and (min-width: $breakpoint-tablet ) {
+
+        .header {
+            p {
+                
+                width: 45%;
+
+            }
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(325px, 365px));
+           
+        }
+    
+    }
+}
+
+@mixin desktop( $breakpoint-desktop) {
+
+    @media screen and (min-width: $breakpoint-desktop ) {
+
+        
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(325px, 365px));
+            grid-template-rows: repeat(2, 230px);
+            margin-bottom: 2rem;
+            padding: 0.5rem;
+        }
+
+        .card__supervisor {
+            grid-column: 1/2;
+            grid-row: 1/3;
+            align-self: center;
+        }
+
+        .card__teamBuilder {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .card__karma {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .card__calculator {
+            grid-column: 3/4;
+            grid-row: 1/3;
+            align-self: center;
+        }
+    
+    }
+
+}
