@@ -77,6 +77,12 @@ body {
     align-self: flex-end;
 }
 
+.footer{
+     width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 @include tablet( 768px );
 
 @include desktop( 1024px );
